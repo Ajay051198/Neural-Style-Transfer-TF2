@@ -32,9 +32,9 @@ Content:
 
 <img src = "content\vancouver.jpg">
 
-<img src="style_transferred\vancouver_abstract.PNG">
+<img src="style_transferred\vancouver_abstract.png">
 
-<img src="style_transferred\vancouver_Starry_night.PNG">
+<img src="style_transferred\vancouver_Starry_night.png">
 
 
 
