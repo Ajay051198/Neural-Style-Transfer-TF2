@@ -101,6 +101,8 @@ def train_step(image,
 def train_for_steps(n_steps,
                     style_image,
                     content_image,
+                    file,
+                    style,
                     content_layers = None,
                     style_layers = None,
                     opt = None,
@@ -133,6 +135,8 @@ def train_for_steps(n_steps,
     for step in range(n_steps):
         os.system('cls')
         print('Generating')
+        print(f"[INFO] Working with {file} as content image")
+        print(f"[INFO] Applying style from {style}")
         completion_percentage = ((step+1)/(n_steps))
         progress = completion_percentage*100
 
@@ -141,7 +145,7 @@ def train_for_steps(n_steps,
         print('-'*int(100-progress), end='')
         print('|', end = ' ')
         print(f"[{round(completion_percentage*100, 2)}%]")
-        
+
         train_step(image,
                    style_targets,
                    content_targets,

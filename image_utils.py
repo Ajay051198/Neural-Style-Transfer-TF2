@@ -1,5 +1,6 @@
 import tensorflow as tf
 import matplotlib.pyplot as plt
+import os
 
 def load_image(path_to_image, max_dim = 720):
     # Loads the image and resizes it such that the larger dim = 512
@@ -18,11 +19,12 @@ def load_image(path_to_image, max_dim = 720):
     img = img[tf.newaxis, :]
     return img
 
-def display_image(image, label = None):
+def display_n_save_image(image, label = None):
     plt.axis('off')
     if len(image.shape) > 3:
         image = tf.squeeze(image, axis=0)
     plt.imshow(image)
     if label:
         plt.title(label)
+        plt.savefig(os.path.join('style_transferred/', f"{label}"))
     plt.show()
