@@ -20,7 +20,7 @@
 
 The terminal should looking the following: 
 
-<img src= "Capture.jpg">
+<img src= "Capture.JPG">
 
 - Once completed you can find your generated images in the style_transferred folder 
 
